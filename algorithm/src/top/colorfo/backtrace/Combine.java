@@ -27,6 +27,7 @@ public class Combine {
             combineHelper(n, k, i + 1);
             path.removeLast();   //回溯
         }
-
     }
 }
+
+
