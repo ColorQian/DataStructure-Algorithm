@@ -15,13 +15,13 @@ public class Combine {
         return result;
     }
 
-
     private void combineHelper(int n, int k, int startIndex){
         //终止条件
         if (path.size() == k){
             result.add(new LinkedList(path));
             return;
         }
+
         for (int i = startIndex; i <= n - (k - path.size()) + 1; i++){  //剪枝优化
             path.add(i);
             combineHelper(n, k, i + 1);
