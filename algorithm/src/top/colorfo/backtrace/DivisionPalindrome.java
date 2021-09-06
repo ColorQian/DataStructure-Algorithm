@@ -38,13 +38,14 @@ public class DivisionPalindrome {
             if (isPalindrome(s,startIndex,i)){ //如果s的[startIndex,i]之间是回文串，则加入到path中
                 String str = s.substring(startIndex,i+1);
                 path.add(str);
+
+                backtracking(s,i+1);  //递归
+
+                path.removeLast(); //回溯
+
             }else {       //如果不是回文串，进行下一次判断
                 continue;
             }
-
-            backtracking(s,i+1);  //递归
-
-            path.removeLast(); //回溯
         }
     }
 

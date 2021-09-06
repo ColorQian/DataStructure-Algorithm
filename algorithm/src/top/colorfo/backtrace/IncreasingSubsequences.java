@@ -37,7 +37,7 @@ public class IncreasingSubsequences {
         for (int i = startIndex; i < nums.length; i++) {
             if (i > startIndex && nums[i] == nums[i-1]) continue;  //去重
 
-            if (i == 0 || nums[i] >= nums[i-1]){ //针对
+            if (i == 0 || nums[i] >= nums[i-1]){
                 path.add(nums[i]);
 
                 backtracking(nums,i+1);
