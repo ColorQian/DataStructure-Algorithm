@@ -31,10 +31,4 @@ public class JumpGame2 {
         return ans;
     }
 
-    //-----------------------
-    public static void main(String[] args) {
-        JumpGame2 game = new JumpGame2();
-        int jump = game.jump(new int[]{2, 2, 1, 1, 4});
-        System.out.println(jump);
-    }
 }
