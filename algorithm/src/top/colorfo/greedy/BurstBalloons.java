@@ -5,6 +5,9 @@ import com.sun.deploy.pings.Pings;
 import java.util.Arrays;
 import java.util.Comparator;
 
+/**
+ * https://leetcode-cn.com/problems/minimum-number-of-arrows-to-burst-balloons/
+ */
 public class BurstBalloons {
 
     public int findMinArrowShots(int[][] points) {
