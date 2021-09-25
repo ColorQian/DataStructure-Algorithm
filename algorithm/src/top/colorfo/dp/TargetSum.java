@@ -15,7 +15,7 @@ public class TargetSum {
         if (Math.abs(target) > sum) return 0;
 
         int bagSize = (sum + target) / 2;
-        int[] dp = new int[bagSize + 1];
+        int[] dp = new int[bagSize + 1];   //dp[i] 表示装满容量为i的有多少种组合
         dp[0] = 1;
         for (int i = 0; i < nums.length; i++) {
             for (int j = bagSize; j >= nums[i]; j--) {

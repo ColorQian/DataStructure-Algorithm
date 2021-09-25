@@ -10,10 +10,8 @@ public class PerfectSquares {
         Arrays.fill(dp, Integer.MAX_VALUE);
         dp[0] = 0;
         for (int i = 1; i * i <= n; i++) {  //遍历物品
-            for (int j = 1; j <= n; j++) {   //遍历背包
-                if (j - i * i >= 0) {
+            for (int j = i * i; j <= n; j++) {   //遍历背包
                     dp[j] = Math.min(dp[j], dp[j - i * i] + 1);
-                }
             }
         }
         return dp[n];
