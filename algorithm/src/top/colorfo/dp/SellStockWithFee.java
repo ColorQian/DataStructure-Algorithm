@@ -4,6 +4,7 @@ package top.colorfo.dp;
  * https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/
  */
 public class SellStockWithFee {
+    //动态规划算法
     public int maxProfit(int[] prices, int fee) {
         int n = prices.length;
         int[][] dp = new int[n][2];
