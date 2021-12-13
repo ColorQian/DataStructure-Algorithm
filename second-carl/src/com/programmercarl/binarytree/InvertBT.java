@@ -20,8 +20,8 @@ public class InvertBT {
         if (cur == null) return;    //2.递归的终止条件
 
         //3.递归的单层逻辑
-        if (cur.left != null) traversal(cur.left);   //左
-        if (cur.right != null) traversal(cur.right); //右
+        traversal(cur.left);   //左
+        traversal(cur.right); //右
 
         TreeNode temp = cur.left;       //中(交换节点的左右孩子)
         cur.left = cur.right;
