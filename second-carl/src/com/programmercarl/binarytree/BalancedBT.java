@@ -15,12 +15,13 @@ public class BalancedBT {
         return getHeight(root) == -1 ? false : true;
     }
 
-    // 返回以该节点为根节点的二叉树的高度，如果不是二叉搜索树了则返回-1
+    // 返回以该节点为根节点的二叉树的高度，如果不是平衡二叉树了则返回-1
     int getHeight(TreeNode root) {
         if (root == null) return 0;
 
         int leftH = getHeight(root.left);
         if (leftH == -1) return -1;
+
         int rightH = getHeight(root.right);
         if (rightH == -1) return -1;
 

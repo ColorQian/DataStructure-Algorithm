@@ -47,4 +47,36 @@ public class PathSum {
         }
         new ArrayList<>(paths);
     }
+
+    /**
+     * 方法二：让计数器count初始为目标和，然后每次减去遍历路径节点上的数值。
+     */
+    public boolean hasPathSum2(TreeNode root, int targetSum) {
+        if (root == null) return false;
+
+        return traversal2(root, targetSum - root.val);
+    }
+    private boolean traversal2(TreeNode root, int count) {
+
+        if (root.left == null && root.right == null) {
+            if (count == 0) return true;  //遇到叶子节点，并且count == 0 返回true
+            else return false;
+        }
+
+        if (root.left != null) {
+            count -= root.left.val;    //递归
+            if (traversal2(root.left, count)) return true;
+
+            count += root.left.val;  //回溯
+        }
+
+        if (root.right != null) {
+            count -= root.right.val;    //递归
+            if (traversal2(root.right, count)) return true;
+
+            count += root.right.val;  //回溯
+        }
+
+        return false;
+    }
 }

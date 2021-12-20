@@ -31,12 +31,11 @@ public class BuildTreeFromInorderPostorder {
         }
 
         //2.根据delimiterIndex划分左右子树
-        //2.1首先根据delimiterIndex切割 中序左数组，再根据中序左数组的长度，切割后序左数组
-        root.left = traversal(inorder, inLeft, delimiterIndex,
-                postorder, postLeft, postLeft + (delimiterIndex - inLeft));
-        //2.2其次 根据delimiterIndex切割 中序右数组，再根据中序右数组的长度，切割后序右数组
-        root.right = traversal(inorder, delimiterIndex + 1, inRight,
-                postorder, postRight - 1 - (inRight  - delimiterIndex - 1), postRight - 1);
+        root.left = traversal(inorder, inLeft, delimiterIndex, //切割中序左数组
+                postorder, postLeft, postLeft + (delimiterIndex - inLeft)); //切割后序左数组
+
+        root.right = traversal(inorder, delimiterIndex + 1, inRight, //切割中序右数组
+                postorder, postRight - 1 - (inRight  - delimiterIndex - 1), postRight - 1);//切割后序右数组
 
         return root;
     }
