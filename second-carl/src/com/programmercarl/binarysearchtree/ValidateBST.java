@@ -9,6 +9,7 @@ import java.util.ArrayList;
  */
 public class ValidateBST {
     /**
+     * 方法一：转换为有序数组
      *利用中序遍历，将二叉树转化为一个序列，判断该序列是否是严格递增的
      * (若前后两个值相等则也不是BST)
      */
@@ -28,5 +29,25 @@ public class ValidateBST {
         list.add(root.val);
 
         traversal(root.right, list);
+    }
+
+    /**
+     *方法二：递归中的双指针
+     */
+    boolean flag = true;
+    TreeNode pre = null;
+    public boolean isValidBST2(TreeNode root) {
+        traversal(root);
+        return flag == true;
+    }
+    void traversal(TreeNode cur) {
+        if (cur == null) return;
+
+        traversal(cur.left);  //左
+        if (pre != null) {  //中
+            if (pre.val >= cur.val) flag = false;
+        }
+        pre = cur;  //保留前一个节点
+        traversal(cur.right);
     }
 }
