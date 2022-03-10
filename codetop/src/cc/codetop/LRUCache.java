@@ -8,6 +8,7 @@ import java.util.LinkedHashMap;
 public class LRUCache {
     int capacity;
     //cache 头部是久为使用的数据，尾部是最近常使用的数据
+    // (想想链表这个数据结构是怎么组织的, remove时从前往后找, put时加在最后面)
     LinkedHashMap<Integer, Integer> cache = new LinkedHashMap<>();
     public LRUCache(int capacity) {
         this.capacity = capacity;
