@@ -1,5 +1,11 @@
 package cc.codetop;
 
+/**参考题解：
+ * https://leetcode.com/problems/reverse-nodes-in-k-group/discuss/183356/Java-O(n)-solution-with-super-detailed-explanation-and-illustration
+ *
+ * leetcode题目链接：
+ * https://leetcode-cn.com/problems/reverse-nodes-in-k-group/submissions/
+ */
 public class ReverseNodesInKGroup {
     public ListNode reverseKGroup(ListNode head, int k) {
         if (head == null) return head;
