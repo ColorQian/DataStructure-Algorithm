@@ -5,7 +5,7 @@ import java.util.Random;
 /**
  * 快速排序
  */
-public class QuickSort {
+public class A_QuickSort {
     public int[] sortArray(int[] nums) {
         quickSort(nums, 0, nums.length - 1);
         return nums;
@@ -49,7 +49,7 @@ public class QuickSort {
     }
 
     public static void main(String[] args) {
-        QuickSort quickSort = new QuickSort();
+        A_QuickSort quickSort = new A_QuickSort();
         int[] nums = new int[]{4,1,5,6,2,7,8,3};
         quickSort.sortArray(nums);
         for (int i : nums) {

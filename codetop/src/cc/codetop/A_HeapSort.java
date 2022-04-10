@@ -1,7 +1,7 @@
 package cc.codetop;
 
 
-public class HeapSort {
+public class A_HeapSort {
     /**
      *
      * @param nums 传入的数组(可以看成完全二叉树)
@@ -56,7 +56,7 @@ public class HeapSort {
 
     //======================
     public static void main(String[] args) {
-        HeapSort sort = new HeapSort();
+        A_HeapSort sort = new A_HeapSort();
         int[] nums = new int[]{3,2,1,5,6,4};
         sort.buildTree(nums, nums.length);
         sort.heapSort(nums, nums.length);
